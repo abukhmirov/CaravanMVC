@@ -8,13 +8,6 @@
         public bool isCovered { get; set; }
 
         public List<Passenger> Passengers { get; set; } = new List<Passenger>();
-
-        public Wagon()
-        {
-
-
-        }
-
-      
+   
     }
 }
