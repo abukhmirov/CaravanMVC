@@ -2,5 +2,19 @@
 {
     public class Wagon
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int NumWheels { get; set; }
+        public bool isCovered { get; set; }
+
+        public List<Passenger> Passengers { get; set; } = new List<Passenger>();
+
+        public Wagon()
+        {
+
+
+        }
+
+      
     }
 }
