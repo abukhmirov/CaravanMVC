@@ -1,0 +1,23 @@
+﻿@model Wagon
+
+
+    <h1>Add a Passenger</h1>
+
+
+<form method="post" action="/wagons/@Model.Id/passengers">
+    <div>
+        <label for="Name"> Name: </label>
+        <input type="text" id="Name" name="Name" />
+    </div>
+    <div>
+        <label for="Age"> Age: </label>
+        <input type="text" id="Age" name="Age" />
+    </div>
+    <div>
+        <label for="Destination"> Destination: </label>
+        <input type="text" id="Destination" name="Destination" />
+    </div>
+    <div class=" =submitbutton">
+        <button type="submit">Add Passenger</button>
+    </div>
+</form>
