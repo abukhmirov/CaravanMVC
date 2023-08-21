@@ -15,7 +15,7 @@ namespace CaravanMVC.Controllers
         }
         public IActionResult Index()
         {
-            var wagons = _context.Wagons.ToList();
+            var wagons = _context.Wagons.Include(w => w.Passengers).ToList();
             return View(wagons);
         }
 
