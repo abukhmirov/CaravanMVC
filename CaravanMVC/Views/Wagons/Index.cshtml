@@ -1,0 +1,14 @@
+﻿@model List<Wagon>
+
+<h1>All Wagons</h1>
+
+<ul>
+    @foreach (var wagon in Model)
+    {
+        <li>
+            <a href="/wagons/@wagon.Id">
+                @wagon.Name
+            </a>
+        </li>
+    }
+</ul>
