@@ -1,0 +1,24 @@
+﻿@model Wagon
+
+
+    <h1>Add a wagon</h1>
+
+
+<form method="post" action="/wagons">
+    <div class="input-group">
+        <label for="Name">Name:</label>
+        <input type="text" id="Name" name="Name" />
+    </div>
+    <div class="input-group">
+        <label for="NumWheels">Number of Wheels:</label>
+        <input type="text" id="NumWheels" name="NumWheels" />
+    </div>
+    <div class="input-group">
+        <label for="isCovered">Is it Covered?:</label>
+        <input type="checkbox" id="isCovered" name="isCovered" />
+    </div>
+
+    <div class=" =submitbutton">
+        <button type="submit">Submit Wagon</button>
+    </div>
+</form>

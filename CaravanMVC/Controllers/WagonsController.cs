@@ -18,7 +18,21 @@ namespace CaravanMVC.Controllers
             var wagons = _context.Wagons.ToList();
             return View(wagons);
         }
-        
-        
+
+        public IActionResult New()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Index(Wagon wagon)
+        {
+            _context.Wagons.Add(wagon);
+            _context.SaveChanges();
+
+
+            return RedirectToAction("Index");
+        }
+
+
     }
 }
