@@ -19,6 +19,15 @@ namespace CaravanMVC.Controllers
             return View(wagons);
         }
 
+        [Route("/wagons/{id:int}")]
+        public IActionResult Show(int Id)
+        {
+            var wagon = _context.Wagons.Include(w => w.Passengers).FirstOrDefault(w => w.Id == Id);
+
+            return View(wagon);
+        }
+
+
         public IActionResult New()
         {
             return View();

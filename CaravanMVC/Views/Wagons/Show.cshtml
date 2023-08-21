@@ -1,0 +1,25 @@
+﻿@model Wagon
+
+<h3>Wagon Details</h3>
+
+Name: @Model.Name
+<br />
+<br />
+
+Number of wheels: @Model.NumWheels
+<br />
+<br />
+Is it Covered?: @Model.isCovered
+
+<br />
+<br />
+
+Passengers:
+<ul>
+    @foreach (var passenger in Model.Passengers)
+    {
+        <li>@passenger.Name</li>
+    }
+</ul>
+
+<a href="/wagons/@Model.Id/passengers/new">Create New Passenger</a>
